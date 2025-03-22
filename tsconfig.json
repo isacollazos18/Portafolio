@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "es6",                                  // Define la versión de JavaScript emitida
+    "module": "commonjs",                             // Define el sistema de módulos
+    "jsx": "react",                                   // Habilita el soporte para JSX (usa "react-jsx" si usas React 17+)
+    "strict": true,                                   // Habilita todas las comprobaciones estrictas
+    "esModuleInterop": true,                          // Mejora la interoperabilidad con módulos CommonJS
+    "skipLibCheck": true,                             // Omite la verificación de archivos .d.ts
+    "forceConsistentCasingInFileNames": true          // Asegura consistencia en el uso de mayúsculas y minúsculas en los nombres de archivo
+  },
+  "include": [
+    "src"                                             // Incluye todos los archivos dentro de la carpeta "src"
+  ],
+  "exclude": [
+    "node_modules",                                   // Excluye la carpeta "node_modules"
+    "dist"                                            // Excluye la carpeta "dist" (si existe)
+  ]
+}
