@@ -1,0 +1,107 @@
+// Variables
+$orange: var(--color-orange);
+$purple: var(--color-purple);
+$royal-blue: var(--color-royal-blue);
+$gradient-bg: linear-gradient(135deg, #1c1a2e 0%, #2d2a50 100%);
+
+// Estilos para la sección de tecnologías
+.technologies-section {
+  padding: 5rem 0;
+  color: rgb(0, 0, 0);
+
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .divider {
+      width: 5rem;
+      height: 0.25rem;
+      background-color: white;
+      margin: 0 auto 1.5rem;
+    }
+
+    .section-description {
+      font-size: 1.125rem;
+      opacity: 0.8;
+      max-width: 48rem;
+      margin: 0 auto;
+    }
+  }
+
+  .technologies-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    
+    // Ocultar scrollbar
+    scrollbar-width: none; // Firefox
+    -ms-overflow-style: none; // IE and Edge
+    &::-webkit-scrollbar {
+      display: none; // Chrome, Safari, and Opera
+    }
+  }
+
+  .tech-item {
+    flex-shrink: 0;
+    width: 10rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tech-icon {
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      font-size: 3rem;
+
+      &.orange {
+        color: $orange;
+      }
+
+      &.purple {
+        color: $purple;
+      }
+
+      &.royal-blue {
+        color: $royal-blue;
+      }
+    }
+  }
+
+  .tech-name {
+    font-weight: bold;
+    font-size: 1.125rem;
+    text-align: center;
+  }
+}
+
+// Media queries
+@media (max-width: 768px) {
+  .technologies-section {
+    .tech-item {
+      width: 8rem;
+    }
+  }
+}

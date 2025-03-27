@@ -1,0 +1,185 @@
+.about-section{
+    padding: 5rem 0;
+  background-color: white;
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .divider {
+      width: 5rem;
+      height: 0.25rem;
+      background-color: var(--color-purple);
+      margin: 0 auto 1.5rem;
+    }
+
+    .section-description {
+      font-size: 1.125rem;
+      color: #4b5563;
+      max-width: 48rem;
+      margin: 0 auto;
+    }
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .feature-card {
+      background-color: #f5f5f5;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      transition: all 0.3s;
+      border-bottom: 4px solid;
+
+      &:hover {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      }
+
+      &.orange-border {
+        border-color: var(--color-orange);
+      }
+
+      &.purple-border {
+        border-color: var(--color-purple);
+      }
+
+      &.blue-border {
+        border-color: var(--color-royal-blue);
+      }
+
+      .feature-icon {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+
+        &.orange-bg {
+          background-color: rgba(255, 165, 0, 0.1);
+          color: var(--color-orange);
+        }
+
+        &.purple-bg {
+          background-color: rgba(147, 112, 219, 0.1);
+          color: var(--color-purple);
+        }
+
+        &.blue-bg {
+          background-color: rgba(30, 64, 175, 0.1);
+          color: var(--color-royal-blue);
+        }
+      }
+
+      .feature-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+
+      .feature-description {
+        color: #4b5563;
+      }
+    }
+  }
+
+  .team-section {
+    margin-top: 6rem;
+
+    .team-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .team-members {
+      display: flex;
+      overflow-x: auto;
+      padding-bottom: 2rem;
+      gap: 2rem;
+      align-items: stretch;
+
+      .team-card {
+        flex-shrink: 0;
+        width: 18rem;
+        background-color: white;
+        border-radius: 0.75rem;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transform: translateY(0);
+        transition: transform 0.3s;
+
+        &:hover {
+          transform: translateY(-0.5rem);
+        }
+
+        .member-image {
+          height: 18rem;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .member-info {
+          padding: 1.5rem;
+          border-top-width: 4px;
+
+          &.orange-border {
+            border-top-color: var(--color-orange);
+          }
+
+          &.purple-border {
+            border-top-color: var(--color-purple);
+          }
+
+          &.blue-border {
+            border-top-color: var(--color-royal-blue);
+          }
+
+          .member-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+          }
+
+          .member-role {
+            font-size: 0.875rem;
+            color: #6b7280;
+            margin-bottom: 0.75rem;
+          }
+
+          .member-specialization {
+            color: #4b5563;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}

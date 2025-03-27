@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "es6",                                  // Define la versión de JavaScript emitida
     "module": "commonjs",                             // Define el sistema de módulos
-    "jsx": "react",                                   // Habilita el soporte para JSX (usa "react-jsx" si usas React 17+)
+    "jsx": "react-jsx",                                   // Habilita el soporte para JSX (usa "react-jsx" si usas React 17+)
     "strict": true,                                   // Habilita todas las comprobaciones estrictas
     "esModuleInterop": true,                          // Mejora la interoperabilidad con módulos CommonJS
     "skipLibCheck": true,                             // Omite la verificación de archivos .d.ts

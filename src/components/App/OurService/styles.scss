@@ -1,0 +1,139 @@
+// Variables
+$orange: var(--color-orange);
+$purple: var(--color-purple);
+$royal-blue: var(--color-royal-blue);
+
+.services-section {
+  padding: 5rem 0;
+  background-color: #f5f5f5;
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    .divider {
+      width: 5rem;
+      height: 0.25rem;
+      background-color: $orange;
+      margin: 0 auto 1.5rem;
+    }
+
+    .section-description {
+      font-size: 1.125rem;
+      color: #666;
+      max-width: 48rem;
+      margin: 0 auto;
+    }
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .service-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+      
+      .service-image img {
+        transform: scale(1.05);
+      }
+
+      .service-link svg {
+        transform: translateX(5px);
+      }
+    }
+    
+    .service-image {
+      height: 12rem;
+      overflow: hidden;
+      
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s;
+      }
+    }
+    
+    .service-content {
+      padding: 1.5rem;
+      
+      .service-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.75rem;
+        
+        .service-icon {
+          margin-right: 0.75rem;
+
+          &.orange {
+            color: $orange;
+          }
+
+          &.purple {
+            color: $purple;
+          }
+
+          &.royal-blue {
+            color: $royal-blue;
+          }
+        }
+        
+        .service-title {
+          font-size: 1.25rem;
+          font-weight: 600;
+        }
+      }
+      
+      .service-description {
+        color: #666;
+        margin-bottom: 1rem;
+      }
+      
+      .service-link {
+        display: flex;
+        align-items: center;
+        color: $orange;
+        font-weight: 500;
+        text-decoration: none;
+        
+        svg {
+          margin-left: 0.5rem;
+          transition: transform 0.3s;
+        }
+      }
+    }
+  }
+}
+
+// Media queries
+@media (max-width: 768px) {
+  .services-section {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}
