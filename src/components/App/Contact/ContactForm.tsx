@@ -20,13 +20,10 @@ const ContactForm = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // Simulación de envío de formulario
     console.log("Formulario enviado:", formData);
 
-    // Mensaje de éxito
     setFormStatus("¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.");
     
-    // Reiniciar formulario
     setFormData({
       name: "",
       email: "",
@@ -93,7 +90,7 @@ const ContactForm = () => {
             required
           ></textarea>
         </div>
-        <button type="submit" className="submit-button">Enviar</button>
+        <button type="submit" className="button">Enviar</button>
       </form>
       {formStatus && <p className="form-status">{formStatus}</p>}
     </section>

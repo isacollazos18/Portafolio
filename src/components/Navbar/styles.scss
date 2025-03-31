@@ -3,11 +3,13 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #333;
-    color: #fff;
+    background-color: transparent;
+    color: #333; 
+    font-family: 'Chillax', sans-serif; 
 
-    &__logo img {
-        height: 50px;
+    &__logo{
+        font-size: 25px;
+        color: #761f00;
     }
 
     &__links {
@@ -15,25 +17,49 @@
         gap: 1.5rem;
 
         a {
-            color: #fff;
+            color: #333; 
             text-decoration: none;
             font-size: 1rem;
+            font-family: 'Chillax', sans-serif; 
+            transition: text-shadow 0.3s ease, transform 0.3s ease;
 
             &:hover {
-                text-decoration: underline;
+                text-shadow: 0px 4px 6px rgba(232, 10, 10, 0.56); 
+                transform: translateY(-2px);
             }
         }
 
         &--open {
-            display: block; // Cambia según el diseño para dispositivos móviles
+            display: block;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        gap: 1rem;
+
+        button {
+            background-color: #f54505; 
+            color: #fff; 
+            border: none;
+            border-radius: 20px; 
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            font-family: 'Chillax', sans-serif;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: #e65a2b; 
+            }
         }
     }
 
     &__toggle {
-        display: none; // Oculto por defecto, visible en móviles
+        display: none; 
         background: none;
         border: none;
-        color: #fff;
+        color: #333;
         font-size: 1.2rem;
         cursor: pointer;
 
@@ -43,7 +69,7 @@
     }
 }
 
-// Media query para dispositivos móviles
+
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;

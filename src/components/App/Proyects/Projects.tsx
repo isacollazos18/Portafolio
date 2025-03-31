@@ -3,27 +3,27 @@ import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 import "./styles.scss";
 
 const projects = [
-    {
-      id: 1,
-      title: "Migración a la nube para empresa financiera",
-      description: "Implementamos una migración completa a la nube para una importante institución financiera, reduciendo sus costos operativos en un 40% y mejorando la seguridad de sus datos.",
-      image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
-      tags: ["Cloud Computing", "Seguridad", "AWS"]
-    },
-    {
-      id: 2,
-      title: "Modernización del centro de datos para retail",
-      description: "Rediseñamos completamente la infraestructura de centros de datos para una cadena de retail nacional, resultando en una mejora del 60% en el rendimiento de sus sistemas.",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
-      tags: ["Data Center", "Virtualización", "VMware"]
-    },
-    {
-      id: 3,
-      title: "Seguridad integral para empresa de salud",
-      description: "Desarrollamos una solución de seguridad completa para proteger los datos sensibles de pacientes en una red de hospitales, cumpliendo con todas las normativas del sector.",
-      image: "https://images.unsplash.com/photo-1581092921461-39b079ce1984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
-      tags: ["Ciberseguridad", "Compliance", "Salud"]
-    }
+  {
+    id: 1,
+    title: "Migración a la nube para empresa financiera",
+    description: "Implementamos una migración completa a la nube para una importante institución financiera, reduciendo sus costos operativos en un 40% y mejorando la seguridad de sus datos.",
+    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+    tags: ["Cloud Computing", "Seguridad", "AWS"]
+  },
+  {
+    id: 2,
+    title: "Modernización del centro de datos para retail",
+    description: "Rediseñamos completamente la infraestructura de centros de datos para una cadena de retail nacional, resultando en una mejora del 60% en el rendimiento de sus sistemas.",
+    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+    tags: ["Data Center", "Virtualización", "VMware"]
+  },
+  {
+    id: 3,
+    title: "Seguridad integral para empresa de salud",
+    description: "Desarrollamos una solución de seguridad completa para proteger los datos sensibles de pacientes en una red de hospitales, cumpliendo con todas las normativas del sector.",
+    image: "https://images.unsplash.com/photo-1581092921461-39b079ce1984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+    tags: ["Ciberseguridad", "Compliance", "Salud"]
+  }
 ];
 
 const Projects = () => {
@@ -69,8 +69,6 @@ const Projects = () => {
             Conoce algunos de nuestros casos de éxito y cómo hemos ayudado a empresas a transformar su infraestructura tecnológica.
           </p>
         </div>
-        
-        {/* Project Carousel */}
         <div className="carousel-container" ref={containerRef}>
           <div className="carousel-overflow">
             <div 
@@ -95,7 +93,7 @@ const Projects = () => {
                         <p className="project-description">{project.description}</p>
                         <div className="project-tags">
                           {project.tags.map((tag, index) => (
-                            <span key={index} className="tech-badge">
+                            <span key={index} className="tag">
                               {tag}
                             </span>
                           ))}
@@ -111,8 +109,7 @@ const Projects = () => {
               ))}
             </div>
           </div>
-          
-          {/* Carousel Controls */}
+        
           <button 
             onClick={goToPrevSlide}
             className="carousel-control prev"
@@ -128,7 +125,6 @@ const Projects = () => {
             <ChevronRight size={24} />
           </button>
           
-          {/* Carousel Indicators */}
           <div className="carousel-indicators">
             {projects.map((_, index) => (
               <button 

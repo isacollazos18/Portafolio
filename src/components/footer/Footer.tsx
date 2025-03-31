@@ -119,12 +119,8 @@ import {
               <h3 className="footer-title">Contáctanos</h3>
               <div className="contact-info">
                 <div className="contact-item">
-                  <MapPin className="contact-icon" size={18} />
-                  <span className="contact-text">Av. Principal 1234, Piso 20, Ciudad Empresarial</span>
-                </div>
-                <div className="contact-item">
                   <Phone className="contact-icon" size={18} />
-                  <span className="contact-text">+1 (555) 123-4567</span>
+                  <span className="contact-text">+57 (313) 780 6860</span>
                 </div>
                 <div className="contact-item">
                   <Mail className="contact-icon" size={18} />

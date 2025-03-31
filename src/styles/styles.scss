@@ -1,0 +1,40 @@
+/* Definición de variables globales */
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$background-light: #fff;
+$background-dark: #333;
+$text-color-light: #333;
+$text-color-dark: #fff;
+
+/* Estilos globales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+body.light-mode {
+  background-color: $background-light;
+  color: $text-color-light;
+}
+
+body.dark-mode {
+  background-color: $background-dark;
+  color: $text-color-dark;
+}
+
+
