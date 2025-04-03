@@ -1,7 +1,14 @@
-.projects-section {
+.projects-section { 
   padding: 1rem 0;
   background-color: white;
   font-family: 'Chillax', sans-serif; 
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  /* MODO OSCURO */
+  body.dark-mode & {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
 
   .container {
     width: 100%;
@@ -18,6 +25,12 @@
       font-size: 2rem;
       color: #333;
       margin-bottom: 1rem;
+      transition: color 0.3s ease;
+
+      /* MODO OSCURO */
+      body.dark-mode & {
+        color: #ffffff;
+      }
     }
 
     .divider {
@@ -25,6 +38,12 @@
       height: 0.25rem;
       background-color: cadetblue;
       margin: 0 auto 1.5rem;
+      transition: background-color 0.3s ease;
+
+      /* MODO OSCURO */
+      body.dark-mode & {
+        background-color: #e67e22;
+      }
     }
 
     .section-description {
@@ -32,12 +51,17 @@
       color: #4b5563;
       max-width: 48rem;
       margin: 0 auto;
+      transition: color 0.3s ease;
+
+      /* MODO OSCURO */
+      body.dark-mode & {
+        color: #b0b0b0;
+      }
     }
   }
 
   .carousel-container {
     position: relative;
-    
 
     .carousel-overflow {
       overflow: hidden;
@@ -62,11 +86,23 @@
         background-color: #fefefe;
         border-radius: 0.5rem;
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s, box-shadow 0.3s;
+        transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s ease, color 0.3s ease;
+
+        /* MODO OSCURO */
+        body.dark-mode & {
+          background-color: #222;
+          color: #e0e0e0;
+          box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+        }
 
         &:hover {
           transform: translateY(-5px);
           box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+          /* MODO OSCURO */
+          body.dark-mode & {
+            box-shadow: 0 10px 15px rgba(255, 255, 255, 0.1);
+          }
 
           .project-image img {
             transform: scale(1.05);
@@ -112,12 +148,24 @@
               font-weight: 600;
               margin-bottom: 1rem;
               color: #333;
+              transition: color 0.3s ease;
+
+              /* MODO OSCURO */
+              body.dark-mode & {
+                color: #ffffff;
+              }
             }
 
             .project-description {
               color: #4b5563;
               margin-bottom: 1.5rem;
               font-size: 1rem;
+              transition: color 0.3s ease;
+
+              /* MODO OSCURO */
+              body.dark-mode & {
+                color: #b0b0b0;
+              }
             }
 
             .project-tags {
@@ -137,6 +185,13 @@
                 padding: 0.5rem 1rem;
                 border-radius: 0.25rem;
                 font-size: 0.875rem;
+                transition: background-color 0.3s ease, color 0.3s ease;
+
+                /* MODO OSCURO */
+                body.dark-mode & {
+                  background-color: #333;
+                  color: #ff7f50;
+                }
               }
             }
 
@@ -147,6 +202,7 @@
               align-items: center;
               text-decoration: none;
               font-size: 1rem;
+              transition: color 0.3s ease;
 
               .link-icon {
                 margin-left: 0.5rem;
@@ -154,6 +210,11 @@
 
               &:hover {
                 color: var(--color-purple);
+
+                /* MODO OSCURO */
+                body.dark-mode & {
+                  color: #e67e22;
+                }
               }
             }
           }
@@ -175,8 +236,20 @@
       cursor: pointer;
       transition: background-color 0.3s, color 0.3s;
 
+      /* MODO OSCURO */
+      body.dark-mode & {
+        background-color: #222;
+        color: #e0e0e0;
+        box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+      }
+
       &:hover {
         color: rgb(98, 70, 70);
+
+        /* MODO OSCURO */
+        body.dark-mode & {
+          color: #ff7f50;
+        }
       }
 
       &.prev {
@@ -200,11 +273,21 @@
         border: none;
         border-radius: 50%;
         background-color: #964215;
-        transition: background-color 0.3s;
+        transition: background-color 0.3s ease;
         cursor: pointer;
 
         &.active {
-          background-color:  #f6cbb5;
+          background-color: #f6cbb5;
+        }
+
+        /* MODO OSCURO */
+        body.dark-mode & {
+          background-color: #e67e22;
+        }
+
+        /* MODO OSCURO - ACTIVO */
+        body.dark-mode &.active {
+          background-color: #ff7f50;
         }
       }
     }

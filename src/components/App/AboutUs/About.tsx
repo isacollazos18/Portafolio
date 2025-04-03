@@ -37,7 +37,7 @@ const teamMembers: TeamMember[] = [
         id: 3,
         name: "Juan Pablo Parra",
         role: "Ingeniero Multimedia",
-        image: "https://media.licdn.com/dms/image/v2/D4E03AQGnZM32RrBVrA/profile-displayphoto-shrink_200_200/B4EZXabUZqGwAY-/0/1743126349837?e=1748476800&v=beta&t=DIPj7mdJdMTj57dcy4YVIYgfa-TvFwsr84y3mPgVNso", // Imagen temporal
+        image: "src\img\juanpablopa.jpg", // Imagen temporal
         specialization: "Desarrollador Frontend",
         github: "https://github.com/juanparra",
         linkedin: "https://www.linkedin.com/in/juan-pablo-parra-holguin-2a4739256/"

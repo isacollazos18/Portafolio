@@ -1,205 +1,238 @@
 .about-section {
   padding: 5rem 0;
-  background-color: white;
+  background-color: #ffffff;
   font-family: 'Chillax', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-  .container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-  }
+/* MODO OSCURO */
+body.dark-mode .about-section {
+  background-color: #121212;
+  color: #e0e0e0;
+}
 
-  .section-header {
-    text-align: center;
-    margin-bottom: 4rem;
+.about-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
 
-    .section-title {
-      font-size: 2.5rem;
-      font-weight: bold;
-      margin: 0 auto;
-      text-align: center;
-      color: #333;
-    }
+.about-section .section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
 
-    .divider {
-      width: 10rem;
-      height: 0.25rem;
-      background-color: #4b5563;
-      margin: 0 auto 1.5rem;
-    }
+.about-section .section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #222;
+  transition: color 0.3s ease;
+}
 
-    .section-description {
-      font-size: 1.125rem;
-      color: #4b5563;
-      max-width: 48rem;
-      margin: 0 auto;
-    }
-  }
+/* MODO OSCURO */
+body.dark-mode .about-section .section-title {
+  color: #ffffff;
+}
 
-  .features {
-    display: flex; 
-    flex-wrap: wrap; 
-    gap: 2rem; 
-    justify-content: center;
+.about-section .divider {
+  width: 10rem;
+  height: 0.3rem;
+  background-color: #4b5563;
+  margin: 1.5rem auto;
+  transition: background-color 0.3s ease;
+}
 
-    .feature-card {
-      flex: 1 1 calc(33.333% - 2rem); 
-      max-width: 300px;
-      background-color: #f5f5f5;
-      padding: 2rem;
-      border-radius: 0.75rem;
-      transition: all 0.3s;
-      border-bottom: 4px solid;
+/* MODO OSCURO */
+body.dark-mode .about-section .divider {
+  background-color: #e67e22;
+}
 
-      &:hover {
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        transform: translateY(-0.5rem); 
-      }
+.about-section .section-description {
+  font-size: 1.2rem;
+  color: #4b5563;
+  max-width: 50rem;
+  margin: 0 auto;
+  transition: color 0.3s ease;
+  line-height: 1.6;
+}
 
-      &.orange-border {
-        border-color: var(--color-orange);
-      }
+/* MODO OSCURO */
+body.dark-mode .about-section .section-description {
+  color: #b0b0b0;
+}
 
-      &.purple-border {
-        border-color: var(--color-purple);
-      }
+/* 🔹 TARJETAS DE FEATURES */
+.about-section .features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
 
-      &.blue-border {
-        border-color: var(--color-royal-blue);
-      }
+.about-section .feature-card {
+  flex: 1 1 calc(33.333% - 2rem);
+  max-width: 320px;
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 12px;
+  transition: all 0.3s;
+  border-bottom: 4px solid #4b5563;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
 
-      .feature-icon {
-        width: 4rem;
-        height: 4rem;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 1.5rem;
+/* MODO OSCURO */
+body.dark-mode .about-section .feature-card {
+  background-color: #222;
+  color: #e0e0e0;
+  border-color: #e67e22;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.15);
+}
 
-        &.orange-bg {
-          background-color: rgba(255, 165, 0, 0.1);
-          color: var(--color-orange);
-        }
+.about-section .feature-card:hover {
+  transform: translateY(-0.4rem);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
 
-        &.purple-bg {
-          background-color: rgba(147, 112, 219, 0.1);
-          color: var(--color-purple);
-        }
+/* TITULO DE LA TARJETA */
+.about-section .feature-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #222;
+  transition: color 0.3s ease;
+}
 
-        &.blue-bg {
-          background-color: rgba(30, 64, 175, 0.1);
-          color: var(--color-royal-blue);
-        }
-      }
+/* MODO OSCURO */
+body.dark-mode .about-section .feature-title {
+  color: #ffffff;
+}
 
-      .feature-title {
-        font-size: 1.5rem;
-        font-weight: 600;
-        margin-bottom: 1rem;
-        color: #333;
-      }
+/* DESCRIPCIÓN DE LA TARJETA */
+.about-section .feature-description {
+  color: #555;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
 
-      .feature-description {
-        color: #4b5563;
-        font-size: 1rem;
-      }
-    }
-  }
+/* MODO OSCURO */
+body.dark-mode .about-section .feature-description {
+  color: #b0b0b0;
+}
 
-  .team-section {
-    margin-top: 4rem;
-  
-    .team-title {
-      font-size: 2rem;
-      font-weight: bold;
-      margin-bottom: 2rem;
-      text-align: center;
-      color: #333;
-    }
-  
-    .team-members {
-      display: flex; 
-      flex-wrap: wrap; 
-      gap: 2rem; 
-      justify-content: center;
-  
-      .team-card {
-        flex: 1 1 calc(33.333% - 2rem);
-        max-width: 300px;
-        background-color: white;
-        border-radius: 0.75rem;
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        transform: translateY(0);
-        transition: transform 0.3s;
-  
-        &:hover {
-          transform: translateY(-0.5rem);
-        }
-  
-        .member-image {
-          height: 200px;
-          overflow: hidden;
-  
-          img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-          }
-        }
-  
-        .member-info {
-          padding: 1.5rem;
-          border-top-width: 4px;
-  
-          &.orange-border {
-            border-top-color: var(--color-orange);
-          }
-  
-          &.purple-border {
-            border-top-color: var(--color-purple);
-          }
-  
-          &.blue-border {
-            border-top-color: var(--color-royal-blue);
-          }
-  
-          .member-name {
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: 0.25rem;
-            color: #333;
-          }
-  
-          .member-role {
-            font-size: 0.875rem;
-            color: #6b7280;
-            margin-bottom: 0.75rem;
-          }
-  
-          .member-specialization {
-            color: #4b5563;
-            font-weight: 500;
-          }
+/* 🔹 SECCIÓN DEL EQUIPO */
+.about-section .team-section {
+  margin-top: 4rem;
+}
 
-          .social-links {
-            margin-top: 1rem;
-            display: flex;
-            gap: 1rem;
-      
-            a {
-              color: #333;
-              transition: color 0.3s ease;
-      
-              &:hover {
-                color: var(--color-purple);
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+.about-section .team-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #222;
+  transition: color 0.3s ease;
+}
+
+/* MODO OSCURO */
+body.dark-mode .about-section .team-title {
+  color: #ffffff;
+}
+
+.about-section .team-members {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.about-section .team-card {
+  flex: 1 1 calc(33.333% - 2rem);
+  max-width: 300px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, background-color 0.3s ease, color 0.3s ease;
+}
+
+/* MODO OSCURO */
+body.dark-mode .about-section .team-card {
+  background-color: #222;
+  color: #e0e0e0;
+  box-shadow: 0 5px 10px rgba(255, 255, 255, 0.1);
+}
+
+.about-section .team-card:hover {
+  transform: translateY(-0.4rem);
+}
+
+/* INFO DEL MIEMBRO */
+.about-section .team-card .member-info {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.about-section .team-card .member-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+/* MODO OSCURO */
+body.dark-mode .about-section .team-card .member-name {
+  color: #ffffff;
+}
+
+.about-section .team-card .member-role {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.75rem;
+  transition: color 0.3s ease;
+}
+
+/* MODO OSCURO */
+body.dark-mode .about-section .team-card .member-role {
+  color: #b0b0b0;
+}
+
+.about-section .team-card .member-specialization {
+  color: #444;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* MODO OSCURO */
+body.dark-mode .about-section .team-card .member-specialization {
+  color: #b0b0b0;
+}
+
+/* LINKS SOCIALES */
+.about-section .team-card .social-links {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.about-section .team-card .social-links a {
+  color: #333;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+/* HOVER DE LINKS */
+.about-section .team-card .social-links a:hover {
+  color: #e67e22;
+}
+
+/* MODO OSCURO */
+body.dark-mode .about-section .team-card .social-links a {
+  color: #e0e0e0;
+}
+
+body.dark-mode .about-section .team-card .social-links a:hover {
+  color: #e67e22;
 }

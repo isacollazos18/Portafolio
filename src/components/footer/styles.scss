@@ -4,6 +4,14 @@
   padding: 4rem 0 2rem;
   font-family: 'Chillax', sans-serif; 
   margin-top: 2rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  /* MODO OSCURO */
+  body.dark-mode & {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+
   .container {
     width: 100%;
     max-width: 1280px;
@@ -38,6 +46,12 @@
       margin-bottom: 1.5rem;
       line-height: 1.6;
       font-size: 1rem;
+      transition: color 0.3s ease;
+
+      /* MODO OSCURO */
+      body.dark-mode & {
+        color: #e0e0e0;
+      }
     }
 
     .footer-social {
@@ -55,6 +69,12 @@
         color: #000000;
         transition: all 0.3s ease;
 
+        /* MODO OSCURO */
+        body.dark-mode & {
+          background-color: rgba(255, 255, 255, 0.1);
+          color: #e0e0e0;
+        }
+
         &:hover {
           background-color: var(--color-orange);
           color: white;
@@ -71,6 +91,12 @@
       margin-bottom: 1.5rem;
       position: relative;
       padding-bottom: 0.75rem;
+      transition: color 0.3s ease;
+
+      /* MODO OSCURO */
+      body.dark-mode & {
+        color: #ffffff;
+      }
 
       &:after {
         content: '';
@@ -98,6 +124,11 @@
           text-decoration: none;
           transition: all 0.3s ease;
 
+          /* MODO OSCURO */
+          body.dark-mode & {
+            color: #e0e0e0;
+          }
+
           .link-icon {
             color: var(--color-orange);
             margin-right: 0.5rem;
@@ -106,7 +137,7 @@
 
           &:hover {
             text-shadow: 0px 4px 6px rgba(232, 10, 10, 0.56); 
-                transform: translateY(-2px);
+            transform: translateY(-2px);
 
             .link-icon {
               transform: translateX(3px);
@@ -135,6 +166,12 @@
           color: #191919;
           line-height: 1.6;
           font-size: 1rem;
+          transition: color 0.3s ease;
+
+          /* MODO OSCURO */
+          body.dark-mode & {
+            color: #e0e0e0;
+          }
         }
       }
     }
@@ -144,11 +181,23 @@
     margin-top: 3rem;
     padding-top: 1.5rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    transition: color 0.3s ease, border-color 0.3s ease;
+
+    /* MODO OSCURO */
+    body.dark-mode & {
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+    }
 
     .copyright {
       text-align: center;
       color: #000000;
       font-size: 0.9rem;
+      transition: color 0.3s ease;
+
+      /* MODO OSCURO */
+      body.dark-mode & {
+        color: #e0e0e0;
+      }
 
       .footer-links {
         margin-top: 0.75rem;
@@ -158,6 +207,11 @@
           transition: color 0.3s ease;
           margin: 0 0.25rem;
           text-decoration: none;
+
+          /* MODO OSCURO */
+          body.dark-mode & {
+            color: #e0e0e0;
+          }
 
           &:hover {
             color: var(--color-orange);

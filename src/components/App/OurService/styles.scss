@@ -1,9 +1,17 @@
 .services-section {
   padding: 7rem;
-  font-family: 'Chillax', sans-serif; 
+  font-family: 'Chillax', sans-serif;
   margin-top: -5rem;
   justify-content: center;
   align-items: center;
+  background-color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  /* MODO OSCURO */
+  body.dark-mode & {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
 
   .container {
     width: 100%;
@@ -20,6 +28,13 @@
       font-weight: bold;
       color: #333;
       margin-bottom: 1rem;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    /* MODO OSCURO */
+    body.dark-mode & .section-title {
+      color: #ffffff;
     }
 
     .divider {
@@ -27,12 +42,18 @@
       height: 0.25rem;
       background-color: var(--color-orange);
       margin: 0 auto 1.5rem;
+      transition: background-color 0.3s ease;
+    }
+
+    /* MODO OSCURO */
+    body.dark-mode & .divider {
+      background-color: #e67e22;
     }
   }
 
   .services-grid {
-    display: grid; 
-    grid-template-columns: repeat(3, 1fr); 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 
     .service-card {
@@ -40,11 +61,23 @@
       border-radius: 0.5rem;
       overflow: hidden;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+
+      /* MODO OSCURO */
+      body.dark-mode & {
+        background-color: #222;
+        color: #e0e0e0;
+        box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+      }
 
       &:hover {
         transform: translateY(-5px);
         box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+        /* MODO OSCURO */
+        body.dark-mode & {
+          box-shadow: 0 10px 15px rgba(255, 255, 255, 0.1);
+        }
 
         .service-image img {
           transform: scale(1.05);
@@ -73,6 +106,7 @@
 
           .service-icon {
             margin-right: 0.5rem;
+            transition: color 0.3s ease;
 
             &.orange {
               color: var(--color-orange);
@@ -90,15 +124,23 @@
           .service-title {
             font-size: 1rem;
             font-weight: 600;
+            color: #333;
+            transition: color 0.3s ease;
+          }
+
+          /* MODO OSCURO */
+          body.dark-mode & .service-title {
+            color: #ffffff;
           }
         }
       }
     }
   }
 
+  /* RESPONSIVE */
   @media (max-width: 1024px) {
     .services-grid {
-      grid-template-columns: repeat(2, 1fr); 
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 

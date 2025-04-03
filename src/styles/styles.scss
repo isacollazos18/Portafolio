@@ -1,40 +1,97 @@
-/* Definición de variables globales */
-$primary-color: #3498db;
+/* Definición de colores optimizados */
+$primary-color: #e67e22;
 $secondary-color: #2ecc71;
-$background-light: #fff;
-$background-dark: #333;
+$background-light: #ffffff;
+$background-dark: #181818;
 $text-color-light: #333;
-$text-color-dark: #fff;
+$text-color-dark: #e0e0e0;
+$card-background-light: #f7f7f7;
+$card-background-dark: #222;
+$contrast-dark: #ffffff;
+$border-dark: #444;
 
-/* Estilos globales */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Modo claro */
 body {
-  line-height: 1.6;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-a {
-  text-decoration: none;
-}
-
-.container {
-  width: 80%;
-  margin: 0 auto;
-}
-
-body.light-mode {
   background-color: $background-light;
   color: $text-color-light;
 }
 
+/* Modo oscuro */
 body.dark-mode {
   background-color: $background-dark;
-  color: $text-color-dark;
+  color: $contrast-dark;
 }
 
+/* Sección del equipo */
+.team-section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
+/* Tarjetas */
+.card {
+  background-color: $card-background-light;
+  padding: 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: center;
+}
+
+.dark-mode .card {
+  background-color: $card-background-dark !important;
+  color: $contrast-dark;
+  border: 1px solid $border-dark;
+}
+
+/* Mejorar visibilidad del texto dentro de las tarjetas */
+.dark-mode .card h3,
+.dark-mode .card p {
+  color: $contrast-dark !important;
+  opacity: 1;
+}
+
+/* Asegurar que los íconos sean visibles */
+.dark-mode .card svg {
+  fill: $contrast-dark !important;
+}
+
+/* Sección "Nuestros Servicios" corregida y centrada */
+.services-section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Asegurar legibilidad en modo oscuro */
+.dark-mode .services-section,
+.dark-mode .team-section,
+.dark-mode .about-section {
+  background-color: $background-dark !important;
+  color: $contrast-dark !important;
+  text-align: center;
+}
+
+/* Mejorar visibilidad de títulos y párrafos */
+.dark-mode h1, 
+.dark-mode h2, 
+.dark-mode h3, 
+.dark-mode h4, 
+.dark-mode p {
+  color: $contrast-dark !important;
+}
+
+/* Corregir visibilidad de "Acerca de Infratech" */
+.about-section {
+  text-align: center;
+  padding: 40px;
+}
+
+.dark-mode .about-section {
+  background-color: $background-dark !important;
+  color: $contrast-dark !important;
+}
