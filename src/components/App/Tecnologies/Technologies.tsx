@@ -1,4 +1,5 @@
-import { 
+import React from "react";
+import {
   SiAmazonwebservices,
   SiReact,
   SiNextdotjs,
@@ -6,9 +7,11 @@ import {
   SiJavascript,
   SiTypescript,
   SiDocker,
-  SiPython
+  SiPython,
+  SiFigma
 } from "react-icons/si";
 import './styles.scss';
+import { useLanguage } from "../../../context/LenguageContext"; // <- corregido
 
 interface Technology {
   id: number;
@@ -24,52 +27,53 @@ const technologies: Technology[] = [
   { id: 5, name: "JavaScript", icon: SiJavascript },
   { id: 6, name: "TypeScript", icon: SiTypescript },
   { id: 7, name: "Docker", icon: SiDocker },
-  { id: 8, name: "Python", icon: SiPython }
+  { id: 8, name: "Python", icon: SiPython },
+  { id: 9, name: "Figma", icon: SiFigma } // <- Añadido
 ];
 
 const Technologies = () => {
+  const { texts } = useLanguage();
+
   return (
     <section id="technologies" className="technologies-section">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">Tecnologías</h2>
+          <h2 className="section-title">{texts.technologiesTitle}</h2>
           <div className="divider"></div>
-          <p className="section-description">
-            Trabajamos con las tecnologías más avanzadas para ofrecer soluciones de vanguardia a nuestros clientes.
-          </p>
+          <p className="section-description">{texts.technologiesDescription}</p>
         </div>
-        
-        {/* Slider with marquee effect */}
+
         <div className="technologies-slider">
           <div className="slider-track">
             {technologies.map((tech, index) => {
-              const colorClass = index % 3 === 0 
-                ? "orange" 
-                : index % 3 === 1 
-                  ? "purple" 
+              const colorClass =
+                index % 3 === 0
+                  ? "orange"
+                  : index % 3 === 1
+                  ? "purple"
                   : "royal-blue";
-              
+
               return (
                 <div key={tech.id} className="tech-item">
                   <div className="tech-icon">
-                    <tech.icon className={colorClass} />
+                    <tech.icon className={`icon ${colorClass}`} />
                   </div>
                   <h3 className="tech-name">{tech.name}</h3>
                 </div>
               );
             })}
-            {/* Duplicate items for smooth looping */}
             {technologies.map((tech, index) => {
-              const colorClass = index % 3 === 0 
-                ? "orange" 
-                : index % 4 === 1 
-                  ? "purple" 
+              const colorClass =
+                index % 3 === 0
+                  ? "orange"
+                  : index % 3 === 1
+                  ? "purple"
                   : "royal-blue";
-              
+
               return (
                 <div key={`duplicate-${tech.id}`} className="tech-item">
                   <div className="tech-icon">
-                    <tech.icon className={colorClass} />
+                    <tech.icon className={`icon ${colorClass}`} />
                   </div>
                   <h3 className="tech-name">{tech.name}</h3>
                 </div>

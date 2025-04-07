@@ -101,12 +101,38 @@ $gradient-bg: linear-gradient(135deg, #1c1a2e 0%, #2d2a50 100%);
       }
     }
   }
+
   @keyframes scroll {
     0% {
       transform: translateX(0);
     }
     100% {
       transform: translateX(-100%);
+    }
+  }
+}
+
+.dark-mode {
+  .technologies-section {
+    color: white;
+
+    .section-header {
+      .section-title,
+      .section-description {
+        color: white;
+      }
+    }
+
+    .tech-item {
+      .tech-name {
+        color: white;
+      }
+
+      .tech-icon {
+        svg {
+          color: white !important;
+        }
+      }
     }
   }
 }
